@@ -16,7 +16,7 @@ const AppointmentCard = ({ appointment, accessToken }) => {
         const response = await fetch("http://localhost:8000/api/v1/admin/get-all-employees", {
           method: "GET",
           headers: {
-            Authorization: Bearer ${JSON.parse(accessToken)},
+            Authorization: Bearer `${JSON.parse(accessToken)}`,
             "Content-Type": "application/json"
           },
         });
@@ -41,7 +41,7 @@ const AppointmentCard = ({ appointment, accessToken }) => {
         {
           method: "PATCH",
           headers: {
-            Authorization: Bearer ${JSON.parse(accessToken)},
+            Authorization: Bearer  `${JSON.parse(accessToken)}`,
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
